@@ -1,4 +1,5 @@
 
+/*eslint-disable no-extra-parens */
 (function () {
 
   'use strict';
@@ -28,8 +29,8 @@
 
 
   describe('Get Weather', function() {
-
-    it('with without zip code', function() {
+	//'with without zip code'
+    it('with without city name', function() {
       reqMock = {
         query: {
 
@@ -90,8 +91,8 @@
       };
 
       var body = {
-        //cod: 200,
-        codeName: 'Auckland',
+        cod: 200,
+       // codeName: 'Auckland',
         //name: 'El Paso',
         name: 'Auckland',
         weather: [
@@ -181,8 +182,8 @@
       };
 
       var body = {
-        //cod: 200,
-        codeName: 'Auckland',
+        cod: 200,
+        //codeName: 'Auckland',
         //name: 'El Paso',
         name: 'Auckland',
         weather: [
@@ -203,7 +204,7 @@
 
       apiv1.getWeather2(reqMock, resMock);
 
-      assert(resMock.status.lastCall.calledWith('Auckland'), 'Unexpected response:' + resMock.status.lastCall.args);
+      assert(resMock.status.lastCall.calledWith(200), 'Unexpected response:' + resMock.status.lastCall.args);
       assert(resMock.send.lastCall.args[0].city === 'Auckland', 'Unexpected response:' + resMock.send.lastCall.args[0].city);
       assert(resMock.send.lastCall.args[0].weather === 'Conditions are cloudy and temperature is 20 C', 'Unexpected response:' + resMock.send.lastCall.args[0].weather);
     });
