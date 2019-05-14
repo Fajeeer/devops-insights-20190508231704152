@@ -14,7 +14,7 @@
     var appUrl = process.env.APP_URL;
 
     describe('Get Weather', function() {
-
+		//'with valid city name'
     	it('with valid city name', function(done) {
         if(!appUrl) {
             assert.fail("Environment variable APP_URL is not defined");
@@ -23,7 +23,7 @@
         request({
       		method: 'GET',
       		//url:appUrl + '/api/v1/getWeather?zip=78613'
-              url: appUrl + '/api/v1/getWeather?cityName=hamilton'
+              url: appUrl + '/api/v1/getWeather?q=New Zealand'
           }, function(err, resp, body) {
           	if(err) {
           		assert.fail('Failed to get the response');
@@ -63,7 +63,7 @@
         request({
       		method: 'GET',
               //url: appUrl + '/api/v1/getWeather?zip=78641'
-              url: appUrl + '/api/v1/getWeather?cityName=hamilton
+             url: appUrl + '/api/v1/getWeather?q=New Zealand'
           }, function(err, resp, body) {
           	if(err) {
           		assert.fail('Failed to get the response');

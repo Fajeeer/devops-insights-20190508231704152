@@ -46,7 +46,7 @@
       reqMock = {
         query: {
          // zip: 79968
-         cityName: 'hamilton'
+         q: 'New Zealand'
         }
       };
 
@@ -66,7 +66,7 @@
       reqMock = {
         query: {
           //zip: 79968
-          cityName: 'hamilton'
+          q: 'New Zealand'
         }
       };
 
@@ -86,7 +86,7 @@
       reqMock = {
         query: {
           //zip: 79968
-          cityName: 'hamilton'
+          q: 'New Zealand'
         }
       };
 
@@ -137,7 +137,7 @@
       reqMock = {
         query: {
           //zip: 79968
-          cityName: 'hamilton'
+          q: 'New Zealand'
         }
       };
 
@@ -157,7 +157,7 @@
       reqMock = {
         query: {
           //zip: 79968
-          cityName: 'hamilton'
+          q: 'New Zealand'
         }
       };
 
@@ -177,7 +177,7 @@
       reqMock = {
         query: {
          // zip: 79968
-         cityName: 'hamilton'
+         q: 'New Zealand'
         }
       };
 
