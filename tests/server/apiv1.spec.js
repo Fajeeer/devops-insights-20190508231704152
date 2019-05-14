@@ -46,7 +46,8 @@
       reqMock = {
         query: {
          // zip: 79968
-         q: 'New Zealand'
+         //q: 'New Zealand'
+         cityName: 'New Zealand'
         }
       };
 
@@ -66,7 +67,8 @@
       reqMock = {
         query: {
           //zip: 79968
-          q: 'New Zealand'
+          //q: 'New Zealand'
+          cityName: 'New Zealand'
         }
       };
 
@@ -86,7 +88,8 @@
       reqMock = {
         query: {
           //zip: 79968
-          q: 'New Zealand'
+         // q: 'New Zealand'
+         cityName: 'New Zealand'
         }
       };
 
@@ -137,7 +140,8 @@
       reqMock = {
         query: {
           //zip: 79968
-          q: 'New Zealand'
+         // q: 'New Zealand'
+         cityName: 'New Zealand'
         }
       };
 
@@ -157,7 +161,8 @@
       reqMock = {
         query: {
           //zip: 79968
-          q: 'New Zealand'
+          //q: 'New Zealand'
+          cityName: 'New Zealand'
         }
       };
 
@@ -177,7 +182,8 @@
       reqMock = {
         query: {
          // zip: 79968
-         q: 'New Zealand'
+         //q: 'New Zealand'
+         cityName: 'New Zealand'
         }
       };
 
