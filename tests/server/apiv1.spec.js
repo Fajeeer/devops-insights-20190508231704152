@@ -30,7 +30,7 @@
 
   describe('Get Weather', function() {
 	//'with without zip code'
-    it('with without city name', function() {
+    it('with without zip code', function() {
       reqMock = {
         query: {
 
@@ -45,7 +45,7 @@
     it('with valid zip code and error from request call', function() {
       reqMock = {
         query: {
-          zip:3210
+          zip:3216
          //q: 'New Zealand'
         // cityName: 'New Zealand'
         }
@@ -66,7 +66,7 @@
     it('with incomplete zip code', function() {
       reqMock = {
         query: {
-          zip:3210
+          zip:3216
           //q: 'New Zealand'
           //cityName: 'New Zealand'
         }
@@ -87,7 +87,7 @@
     it('with valid zip code', function() {
       reqMock = {
         query: {
-          zip:3210
+          zip:3216
          // q: 'New Zealand'
          //cityName: 'New Zealand'
         }
