@@ -47,7 +47,7 @@
         query: {
           zip:3216
          //q: 'New Zealand'
-        // cityName: 'New Zealand'
+        //cityName: 'New Zealand'
         }
       };
 
@@ -68,7 +68,7 @@
         query: {
           zip:3216
           //q: 'New Zealand'
-          //cityName: 'New Zealand'
+          //cityName: 'Hamilton'
         }
       };
 
@@ -88,16 +88,13 @@
       reqMock = {
         query: {
           zip:3216
-         // q: 'New Zealand'
-         //cityName: 'New Zealand'
+         //cityName: 'Hamilton'
         }
       };
 
       var body = {
         cod: 200,
          name: 'Hamilton',
-        //name: 'El Paso',
-        //name: 'Auckland',
         weather: [
           {
             main: 'cloudy'//'cold'
@@ -121,7 +118,7 @@
       assert(resMock.send.lastCall.args[0].weather === 'Conditions are cloudy and temperature is 20 C', 'Unexpected response:' + resMock.send.lastCall.args[0].weather);
     });
   });
-  /*
+  
   describe('Get Weather 2', function() {
 
     it('with without zip code', function() {
@@ -139,9 +136,9 @@
     it('with valid zip code and error from request call', function() {
       reqMock = {
         query: {
-          zip:3210
+          //zip:3210
          // q: 'New Zealand'
-         //cityName: 'New Zealand'
+         cityName: 'New Zealand'
         }
       };
 
@@ -160,9 +157,9 @@
     it('with incomplete zip code', function() {
       reqMock = {
         query: {
-          zip:3210
+          //zip:3210
           //q: 'New Zealand'
-          //cityName: 'New Zealand'
+          cityName: 'New Zealand'
         }
       };
 
@@ -181,9 +178,9 @@
     it('with valid zip code', function() {
       reqMock = {
         query: {
-         zip: 3210
+         //zip: 3210
          //q: 'New Zealand'
-         //cityName: 'New Zealand'
+         cityName: 'New Zealand'
         }
       };
 
@@ -191,14 +188,14 @@
         cod: 200,
         //codeName: 'Auckland',
         //name: 'El Paso',
-        name: 'Hamilton',
+        name: 'Auckland',
         weather: [
           {
-            main: 'cloudy'//'cold'
+            main: 'Rainy'//'cold'
           }
         ],
         main: {
-          temp: 20 //78
+          temp: 16 //78
         }
       };
 
@@ -211,8 +208,8 @@
       apiv1.getWeather2(reqMock, resMock);
 
       assert(resMock.status.lastCall.calledWith(200), 'Unexpected response:' + resMock.status.lastCall.args);
-      assert(resMock.send.lastCall.args[0].city === 'Hamilton', 'Unexpected response:' + resMock.send.lastCall.args[0].city);
-      assert(resMock.send.lastCall.args[0].weather === 'Conditions are cloudy and temperature is 20 C', 'Unexpected response:' + resMock.send.lastCall.args[0].weather);
+      assert(resMock.send.lastCall.args[0].city === 'Auckland', 'Unexpected response:' + resMock.send.lastCall.args[0].city);
+      assert(resMock.send.lastCall.args[0].weather === 'Conditions are rainy and temperature is 16 C', 'Unexpected response:' + resMock.send.lastCall.args[0].weather);
     });
   });
-}());*/
+}());
