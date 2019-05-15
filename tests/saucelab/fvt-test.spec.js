@@ -48,9 +48,9 @@
       });
     });
 	//'check for zip4 element'
-    it("Check for city4 element", function(done) {
+    it("Check for zip4 element", function(done) {
     											//zip4
-    	driver.isElementPresent(webdriver.By.id('city4')).then(function(present) {
+    	driver.isElementPresent(webdriver.By.id('zip4')).then(function(present) {
         assert.equal(present, true);
         done();
       });
@@ -65,7 +65,7 @@
 	//'it enter zip  code and check output -1'
     it("Enter city name and check output - 1", function(done) {
    										//zip1				//number 
-      driver.findElement(webdriver.By.id('city1')).sendKeys('auckland');
+      driver.findElement(webdriver.By.id('zip11')).sendKeys('78613');
       driver.findElement(webdriver.By.id('zip1city')).getText().then(function(text) {
         assert.equal(text, ' Auckland'/*' Anderson Mill'*/);
         done();
@@ -74,7 +74,7 @@
 	//'enter city name and check output - 2'
     it("Enter city name and check output - 2", function(done) {
     									//zip4				//75038
-      driver.findElement(webdriver.By.id('city4')).sendKeys('hamilton');
+      driver.findElement(webdriver.By.id('zip4')).sendKeys('75038');
       driver.findElement(webdriver.By.id('zip4city')).getText().then(function(text) {
         assert.equal(text, ' Hamilton'/*' Irving'*/);
         done();
