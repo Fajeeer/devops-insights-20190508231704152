@@ -21,7 +21,7 @@
         }
         request({
       		method: 'GET',
-              url: appUrl + '/api/v1/getWeather?q=Hamilton'
+              url: appUrl + '/api/v1/getWeather?cityName=Hamilton'
           }, function(err, resp, body) {
           	if(err) {
           		assert.fail('Failed to get the response');
@@ -41,7 +41,7 @@
         }
         request({
       		method: 'GET',
-              url: appUrl + '/api/v1/getWeather'
+              url: appUrl + '/api/v1/getWeather?cityName=Hamilton'
           }, /* @callback */ function(err, resp, body) {
           	if(err) {
           		assert.fail('Failed to get the response');
@@ -59,7 +59,7 @@
         }
         request({
       		method: 'GET',
-             url: appUrl + '/api/v1/getWeather?zip=3216'
+             url: appUrl + '/api/v1/getWeather?cityName=Hamiltion'
           }, function(err, resp, body) {
           	if(err) {
           		assert.fail('Failed to get the response');
