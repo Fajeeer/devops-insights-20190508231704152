@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-nz">
 
     <head>
         <title>DemoDRA - Current Weather</title>
-
+        
         <link rel="stylesheet" href="/built/css/default.css" />
 
         <script src="/bower_components/angular/angular.js"></script>
@@ -22,5 +22,32 @@
             angular.bootstrap(document, ['ConsoleModule']);
         });
     </script>
+
+	<head>
+		<title>Google Map</title>
+		<meta name="cieport" content="initial-scale=1.0">
+		<meta charset="utf-8">
+		<style>
+		
+		#map{
+			heigh: 100%;
+		}
+		<style>
+	<head>
+	
+	<body>
+		<div id="map"></div>
+		<script>
+		var map;
+		function iniMap(){
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: {lat: -34.397, lgn: 150.644},
+				zoom: 8
+			});
+		}
+		<script>
+		<script src = "https://maps.googleapis.com/maps/api/ks?key=AIzaSyDOd05ARvJt0A5QMzaKr21EqIvZdhYABJE&callback=iniMap"
+		async defer></script>
+	<body>
 
 </html>
