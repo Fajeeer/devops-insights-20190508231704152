@@ -29,7 +29,7 @@
 
 
   describe('Get Weather', function() {
-	//'with without zip code'
+  	
     it('with without zip code', function() {
       reqMock = {
         query: {
@@ -114,12 +114,12 @@
       apiv1.getWeather(reqMock, resMock);
 
       assert(resMock.status.lastCall.calledWith(200), 'Unexpected response:' + resMock.status.lastCall.args);
-      assert(resMock.send.lastCall.args[0].city === 'Hamilton'/*'El Paso'*/, 'Unexpected response:' + resMock.send.lastCall.args[0].city);
+      assert(resMock.send.lastCall.args[0].city === 'Hamilton', 'Unexpected response:' + resMock.send.lastCall.args[0].city);
       assert(resMock.send.lastCall.args[0].weather === 'Conditions are cloudy and temperature is 20 C', 'Unexpected response:' + resMock.send.lastCall.args[0].weather);
     });
   });
-  
-  describe('Get Weather 2', function() {
+
+/*  describe('Get Weather 2', function() {
 
     it('with without zip code', function() {
       reqMock = {
@@ -211,5 +211,6 @@
       assert(resMock.send.lastCall.args[0].city === 'Auckland', 'Unexpected response:' + resMock.send.lastCall.args[0].city);
       assert(resMock.send.lastCall.args[0].weather === 'Conditions are rainy and temperature is 16 C', 'Unexpected response:' + resMock.send.lastCall.args[0].weather);
     });
-  });
+  });*/
 }());
+
