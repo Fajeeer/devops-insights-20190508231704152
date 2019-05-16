@@ -62,9 +62,9 @@
     });
 	//'it enter zip  code and check output -1'
     it("Enter zip code and check output - 1", function(done) { 
-      driver.findElement(webdriver.By.id('zip1')).sendKeys('78613');
+      driver.findElement(webdriver.By.id('zip1')).sendKeys('');
       driver.findElement(webdriver.By.id('zip1city')).getText().then(function(text) {
-        assert.equal(text, ' Auckland'/*' Anderson Mill'*/);
+        assert.equal(text, ' Anderson Mill');
         done();
       });
     });

@@ -1,5 +1,4 @@
 
-/*eslint-disable no-extra-parens */
 (function () {
 
   'use strict';
@@ -45,9 +44,9 @@
     it('with valid zip code and error from request call', function() {
       reqMock = {
         query: {
-          //zip:3216
+          zip:3216
          //q: ' Hamilton'
-        cityName: 'Hamilton'
+        //cityName: 'Hamilton'
         }
       };
 
@@ -66,9 +65,9 @@
     it('with incomplete zip code', function() {
       reqMock = {
         query: {
-          //zip:3216
+          zip:3216
           //q: 'Hamilton'
-          cityName: 'Hamilton'
+          //cityName: 'Hamilton'
         }
       };
 
@@ -87,8 +86,8 @@
     it('with valid zip code', function() {
       reqMock = {
         query: {
-          //zip:3216
-         cityName: 'Hamilton'
+          zip:3216
+         //cityName: 'Hamilton'
          //q: 'Hamilton '
         }
       };
