@@ -46,8 +46,8 @@
       reqMock = {
         query: {
           //zip:3216
-         q: ' Hamilton'
-        //cityName: 'New Zealand'
+         //q: ' Hamilton'
+        cityName: 'Hamilton'
         }
       };
 
@@ -67,8 +67,8 @@
       reqMock = {
         query: {
           //zip:3216
-          q: 'Hamilton'
-          //cityName: 'Hamilton'
+          //q: 'Hamilton'
+          cityName: 'Hamilton'
         }
       };
 
@@ -88,8 +88,8 @@
       reqMock = {
         query: {
           //zip:3216
-         //cityName: 'Hamilton'
-         q: 'Hamilton '
+         cityName: 'Hamilton'
+         //q: 'Hamilton '
         }
       };
 
