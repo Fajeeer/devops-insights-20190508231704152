@@ -25,15 +25,26 @@
     </script>
 
 	<script>
-		
-		var map;  
+		//Map option
+		var map; 
 		function iniMap(){
 			map = new google.maps.Map(document.getElementById('map'), {
 				center: {lat: -37.7833, lng: 175.2833},
 				zoom: 8
 			});
+		//add markers
+		var marker1 = new google.maps.Marker({
+			posisition: {lat: -37.7833, lng: 175.2833},
+			map:map //it's the map that we have created
+		});
 		
+		var infoWindow = new google.maps.InfoWindow({
+			content: '<h1>Lynn Ma</h1>'
+		});
 		
+		marker.addListener('click', function(){
+			infoWindow.open(map, marker);
+		});
 		}
 	</script>
 		<script 
