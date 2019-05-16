@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-nz">
+<html lang="en-us">
 
     <head>
         <title>DemoDRA - Current Weather</title>
@@ -14,6 +14,7 @@
     <body>
         <div float="left">
             <% include includes/mainbody %>
+            <div id="map" stle="width:80%; height:80%"></div>
         </div>
     </body>
 
@@ -40,8 +41,9 @@
 	<head>
 	
 	<body>
-		<hl>Google Map</hl>
-		<div id="map" stle="width:100%; height:100%"></div>
+		<!--hl>Google Map</hl-->
+		
+	<body>
 		<script>
 		var map;
 		function iniMap(){
@@ -53,6 +55,6 @@
 		<script>
 		<script src = "https://maps.googleapis.com/maps/api/ks?key=AIzaSyDOd05ARvJt0A5QMzaKr21EqIvZdhYABJE&callback=iniMap"
 		async defer></script>
-	<body>
+	
 
 </html>
