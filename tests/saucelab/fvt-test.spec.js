@@ -60,7 +60,6 @@
         done();
       });
     });
-	//'it enter zip  code and check output -1'
     it("Enter zip code and check output - 1", function(done) { 
       driver.findElement(webdriver.By.id('zip1')).sendKeys('');
       driver.findElement(webdriver.By.id('zip1city')).getText().then(function(text) {
@@ -68,7 +67,6 @@
         done();
       });
     });
-	//'enter city name and check output - 2'
     it("Enter zip code and check output - 2", function(done) {
       driver.findElement(webdriver.By.id('zip4')).sendKeys('75038');
       driver.findElement(webdriver.By.id('zip4city')).getText().then(function(text) {
