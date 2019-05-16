@@ -16,7 +16,7 @@
             <% include includes/mainbody %>
             <div id="map" stle="width:80%; height:80%"></div>
         </div>
-    </body>
+    
 
     <script>
          angular.element(document).ready(function() {
@@ -40,21 +40,23 @@
 		<style-->
 	<head>
 	
-	<body>
+	
 		<!--hl>Google Map</hl-->
-		
-	<body>
+	
 		<script>
-		var map;
+		var map; 
+		var location= {lat: -37.7833, lgn: 175.2833},
 		function iniMap(){
 			map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: -37.7833, lgn: 175.2833},
+				center: location
 				zoom: 8
 			});
+		});
+		
 		}
 		<script>
 		<script src = "https://maps.googleapis.com/maps/api/ks?key=AIzaSyDOd05ARvJt0A5QMzaKr21EqIvZdhYABJE&callback=iniMap"
 		async defer></script>
-	
+	<body>
 
 </html>
