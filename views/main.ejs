@@ -113,6 +113,8 @@
 				document.getElementById("zip"+id).value=json.results['0'].rows[0];
 				angular.element(document.getElementById("a")).scope().dosearch(id,json.result['0'].rows[0]);
 			});}-->
+			var map;
+			map = new google.maps.Map(document.getElementById('map'), {center:NZ, zoom:8});
 		
 		var marker1 = new google.maps.Marker({position: {lat: -36.8484, lng: 174.7633},map:map});
 		
