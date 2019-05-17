@@ -14,6 +14,7 @@
     <body>
         <div float="left">
             <% include includes/mainbody %>
+            <div id="map"></div>
         </div>
     
     <div id="map" style="width:100%; height:600px"></div>
@@ -25,26 +26,109 @@
     </script>
 
 	<script>
-		//Map option
-		var map; 
-		function iniMap(){
+		 		 
+		 
+		function iniMap()){
+			var weather;
+			car cityName;
+			var coords = {lat: -36.8484, lng: 174.7633}
 			map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: -37.7833, lng: 175.2833},
+				center: coords,
 				zoom: 8
+				
+				m1 = new google.maps.Marker({map:map});
+				m2 = new google.maps.Marker({map:map});
+				m3 = new google.maps.Marker({map:map});
+				m4 = new google.maps.Marker({map:map});
+				m5 = new google.maps.Marker({map:map});
+				
+				infoWindow = new google.maps.InfoWindow();
+				
+				m5.addListener('click', function(){
+					infoWindow.open(map, m5);
+				});
+				
+				map.addListener('click', function(e){
+					fetch('/api/v1/getWeather2?lat='+e.latLng.lat()+'@lon'+elatLng.lng())
+					.then(function(respomse){
+						if(respon.status==200){
+							return response,json();
+						}
+						else {return Promise.reject("reject")};
+					})
+				})
+			.then(function(json)
+			weather =json.weather;
+			city = json.city
+			})
+			
+			.then(function(){
+			 fetch('/api//v1/getWeather?zip='+city)
+		 })
+		 
+
+			 .then(function(response){
+			 	if(response.status==200){
+			 		return response.json();
+			 	}
+			 
+			})
+			
+			.then(function(json){
+				car loca = new google.maps.LatLng(Json.lat, json.lon);
+				m5.setPosition(loca);
+				var contentString = '<div id="content">'+
+									'<div id ="siteNotice">'+
+									'</div>'+
+									'<h3 id="weatherHeading" class=weatherHeading"">'+city+
+									</h3>
+									'<div id="bodycontent">'+
+									'<p>'+weather+
+									'</p>'
+									'</div>'+
+									'</div>'
+									
+				infoWindow.close();
+				infoWindow = new google.maps.InfoWindow({
+					content: contentString
+				});
+				
+				infoWindo.open(map, m5);});}).catch(err=>{});
+									
 			});
-		//add markers
+			
+			window.onload = funtion(){fetch('/api/v1/getAuth').then(function(response){
+				if(response.status==200{return response.json();}
+				else {return Promise.reject("reject");}
+				}).then(function(){var i;
+				for(i=1 ; i<5; i++){doAdd(i)}});
+			};
+			
+			function doAdd(id){fetch('/api/v1/getData?id='+id).then(function(response){
+				return response.json();
+			}).then(function(json){
+				document.getElementById("zip"+id).value=json.results['0'].rows[0];
+				angular.element(document.getElementById("a")).scope().dosearch(id,json.result['0'].rows[0]);
+			});}
+		<!--
 		var marker1 = new google.maps.Marker({
-			posisition: {lat: -37.7833, lng: 175.2833},
-			map:map //it's the map that we have created
+			position: {lat: -36.8484, lng: 174.7633},
+			map:map
 		});
 		
 		var infoWindow = new google.maps.InfoWindow({
-			content: '<h1>Lynn Ma</h1>'
+			content: '<h1>Lynn MA</h1>'
 		});
 		
 		marker.addListener('click', function(){
 			infoWindow.open(map, marker);
-		});
+		});-->
+		
+		<!--function addMarker(coords){}
+			var marker = new google.maps.Marker({
+				position: coords,
+				map:map
+			});-->	
 		}
 	</script>
 		<script 
