@@ -27,7 +27,7 @@
 
 	<script>
 		 		 
-		 
+		<!-- 
 		function iniMap()){
 			var weather;
 			car cityName;
@@ -112,27 +112,14 @@
 			}).then(function(json){
 				document.getElementById("zip"+id).value=json.results['0'].rows[0];
 				angular.element(document.getElementById("a")).scope().dosearch(id,json.result['0'].rows[0]);
-			});}
-		<!--
-		var marker1 = new google.maps.Marker({
-			position: {lat: -36.8484, lng: 174.7633},
-			map:map
-		});
+			});}-->
 		
-		var infoWindow = new google.maps.InfoWindow({
-			content: '<h1>Lynn MA</h1>'
-		});
+		var marker1 = new google.maps.Marker({position: {lat: -36.8484, lng: 174.7633},map:map});
 		
-		marker.addListener('click', function(){
-			infoWindow.open(map, marker);
-		});-->
+		var infoWindow = new google.maps.InfoWindow({content: '<h1>Lynn MA</h1>'});
 		
-		<!--function addMarker(coords){}
-			var marker = new google.maps.Marker({
-				position: coords,
-				map:map
-			});-->	
-		}
+		marker.addListener('click', function(){infoWindow.open(map, marker);});
+		
 	</script>
 		<script 
 		async defer
