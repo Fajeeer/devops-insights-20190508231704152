@@ -26,11 +26,23 @@
     </script>
 
 	<script>
+	function iniMap(){
 		 	var map;
-		 	var location={lat: -37.7833, lng: 172.2793};
+		 	var m1 = {lat: -37.7870, lng:175.2793};
+		 	var m2 = {lat: -36.8484, lng:174.7633};
+		 	var m3 = {lat: -38.1387, lng:176.2451};
+		 	var m4 = {lat: -41.2768, lng:174.7779};
+		 	var m5 = {lat: -45.8788, lng:170.5028};
+		 	var m6 = {lat: -40.9006, lng:174.8860};
 		 	
-		 	function iniMap(){
 		 		map = new google.maps.Map(document.getElementById('map'), {center: location, zoom:8});
+		 		
+		 		var mark1 =  = new google.maps.Marker({position: m1, map: map});
+		 		var mark2 =  = new google.maps.Marker({position: m2, map: map});
+		 		var mark3 =  = new google.maps.Marker({position: m3, map: map});
+		 		var mark4 =  = new google.maps.Marker({position: m4, map: map});
+		 		var mark5 =  = new google.maps.Marker({position: m5, map: map});
+		 		var mark6 =  = new google.maps.Marker({position: m6, map: map});
 		 	}
 			
 		
@@ -38,6 +50,8 @@
 		<script 
 		async defer
 		src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDOd05ARvJt0A5QMzaKr21EqIvZdhYABJE&callback=iniMap"
+	>
+
 		</script>
 	</body>
 
