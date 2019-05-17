@@ -17,7 +17,7 @@
             
         </div>
     
-    <div id="map" style="width:100%; height:600px"></div>
+    <div id="map" style="width:80%; height:80%"></div>
 
     <script>
          angular.element(document).ready(function() {
@@ -26,44 +26,18 @@
     </script>
 
 	<script>
-		 	<!--title>Google Map</title>
-		 	<meta name="cieport" content="initial-scale=1.0">
-		 	<meta charset="utf-8">
+		 	var map;
+		 	var location={lat: -37.7833, lng: 172.2793};
 		 	
-			var map;
-			function iniMap(){
-			map = new google.maps.Map(document.getElementById('map'), {center:NZ, zoom:8});
-	}
-		 function initMap() {
-	      	  var map;
-	      	  var Hamilton = {lat: -37.7870, lng: 175.2793};
-	          var Wellington = {lat: -41.2865, lng: 174.7762};
-	          var Christchurch = {lat: -43.5321, lng: 172.6362};
-	          var Queenstown = {lat: -45.0312, lng: 168.6626};
-	          var Dunedin = {lat: -45.8788, lng: 170.5028};
-	          var Rotorua = {lat: -38.1368, lng: 176.2497};
-	          var Auckland = {lat: -36.8485, lng: 174.7633};
-	          var NZ = {lat: -40.9006, lng: 174.8860};
-	          map = new google.maps.Map(document.getElementById('map'), {
-	          center: NZ,
-	          zoom: 6
-	          });-->
-	        
-	        
-	        var markerHam = new google.maps.Marker({position: Hamilton, map: map});
-	        var markerWel = new google.maps.Marker({position: Wellington, map: map});
-	        var markerChch = new google.maps.Marker({position: Christchurch, map: map});
-	        var markerQtown = new google.maps.Marker({position: Queenstown, map: map});
-	        var markerDun = new google.maps.Marker({position: Dunedin, map: map});
-	        var markerRot = new google.maps.Marker({position: Rotorua, map: map});
-	        var markerAuk = new google.maps.Marker({position: Auckland, map: map});
-	      }
-		
+		 	function iniMap(){
+		 		map = new google.maps.Map(document.getElementById('map'), {center: location, zoom:8});
+		 	}
+			
 		
 	</script>
 		<script 
 		async defer
-		src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDOd05ARvJt0A5QMzaKr21EqIvZdhYABJE&callback=iniMap">
+		src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDOd05ARvJt0A5QMzaKr21EqIvZdhYABJE&callback=iniMap"
 		</script>
 	</body>
 
