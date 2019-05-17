@@ -9,50 +9,35 @@
         <script src="/bower_components/angular/angular.js"></script>
         <script src="/bower_components/angular-route/angular-route.js"></script>
         <script src="/js/controllers.js"></script>
+        
+        <style>
+        	#map {
+  			height: 500px;
+  			width: 100%
+			}
+		</style>
     </head>
+
 
     <body>
         <div float="left">
             <% include includes/mainbody %>
-            
+            <div id="map"></div>
         </div>
-    
-    <div id="map" style="width:80%; height:80%"></div>
+			
+		
+	
+		<script 
+		async defer
+		src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDOd05ARvJt0A5QMzaKr21EqIvZdhYABJE&callback=iniMap">
+
+		</script>
+	    </body>
 
     <script>
          angular.element(document).ready(function() {
             angular.bootstrap(document, ['ConsoleModule']);
         });
     </script>
-
-	<script>
-	function iniMap(){
-		 	var map;
-		 	var m1 = {lat: -37.7870, lng:175.2793};
-		 	var m2 = {lat: -36.8484, lng:174.7633};
-		 	var m3 = {lat: -38.1387, lng:176.2451};
-		 	var m4 = {lat: -41.2768, lng:174.7779};
-		 	var m5 = {lat: -45.8788, lng:170.5028};
-		 	var m6 = {lat: -40.9006, lng:174.8860};
-		 	
-		 		map = new google.maps.Map(document.getElementById('map'), {center: location, zoom:8});
-		 		
-		 		var mark1 =  = new google.maps.Marker({position: m1, map: map});
-		 		var mark2 =  = new google.maps.Marker({position: m2, map: map});
-		 		var mark3 =  = new google.maps.Marker({position: m3, map: map});
-		 		var mark4 =  = new google.maps.Marker({position: m4, map: map});
-		 		var mark5 =  = new google.maps.Marker({position: m5, map: map});
-		 		var mark6 =  = new google.maps.Marker({position: m6, map: map});
-		 	}
-			
-		
-	</script>
-		<script 
-		async defer
-		src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDOd05ARvJt0A5QMzaKr21EqIvZdhYABJE&callback=iniMap"
-	>
-
-		</script>
-	</body>
 
 </html>
