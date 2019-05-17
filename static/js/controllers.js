@@ -1,4 +1,5 @@
 
+
 var ConsoleModule = angular.module('ConsoleModule', ['ngRoute']);
 
 var url1={lat:0, lng:0};
@@ -49,34 +50,34 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
                 if(which === 1) {
                    // $scope.zip1City = response.data.city;
                     $scope.zip1Weather = response.data.weather;
-                    url1= new google.maps.LatLng(response.data.lat, response.data.lon);
+                    /*url1= new google.maps.LatLng(response.data.lat, response.data.lon);
                     m1.setPosition(url1);
                     $http({method:"Get",
-                    url:'/api/v1/updateData?id=2&name=' + data});
+                    url:'/api/v1/updateData?id=1&name=' + data});*/
                     
                 } else if(which === 2) {
                     //$scope.zip2City = response.data.city;
                     $scope.zip2Weather = response.data.weather;
-                    url1= new google.maps.LatLng(response.data.lat, response.data.lon);
+                 /*   url1= new google.maps.LatLng(response.data.lat, response.data.lon);
                      m2.setPosition(url1);
-                     @http({method:"Get",
-                     url:'/api/v1/updateData?id=2&name' + data});
+                     $http({method:"Get",
+                     url:'/api/v1/updateData?id=2&name' + data});*/
                      
                 } else if(which === 3) {
                     //$scope.zip3City = response.data.city;
                     $scope.zip3Weather = response.data.weather;
-                     url1= new google.maps.LatLng(response.data.lat, response.data.lon);
+                   /*  url1= new google.maps.LatLng(response.data.lat, response.data.lon);
                     m3.setPosition(url1);
                     $http({method:"Get",
-                    url:'/api/v1/updateData?id=2&name=' + data});
+                    url:'/api/v1/updateData?id=3&name=' + data});*/
                     
                 } else if(which === 4) {
                     //$scope.zip4City = response.data.city;
                     $scope.zip4Weather = response.data.weather;
-                     url1= new google.maps.LatLng(response.data.lat, response.data.lon);
+                   /*  url1= new google.maps.LatLng(response.data.lat, response.data.lon);
                     m4.setPosition(url1);
                     $http({method:"Get",
-                    url:'/api/v1/updateData?id=2&name=' + data});
+                    url:'/api/v1/updateData?id=4&name=' + data});*/
                 } 
             });
         } else {
@@ -96,7 +97,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
         }
     };
     
-    $scope.dosearch=function(which,data){
+  /*  $scope.dosearch=function(which,data){
     	$http({
     		method:"Get",
     		url:'/api/v1/getWeather?zip'+data}).then(function(response){
@@ -124,8 +125,6 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
     				url1=new google.maps.LatLng(response.data.lat, response.data.lon);
     				m4.setPosition(url1);
     			}
-    		})
-    	
-    }
-    
+    		});
+    }; */    
 }]);
